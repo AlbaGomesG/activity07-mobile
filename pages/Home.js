@@ -1,12 +1,13 @@
-import { StyleSheet, Text, View, Image } from 'react-native';
+import { StyleSheet, Text, View, Image } from "react-native";
+import Header  from "../components/Header";
 
-export default function Home() {
-  return (
-    <View style={styles.container}>
-      <Image style={styles.image} source={require('../assets/img/flower.jpg')}/>
-      <Text style={styles.title}>Bem-vindo(a) ao nosso site!</Text>
-    </View>
-  );
+export default function Home ({ navigation }) {
+    return (
+        <View style={styles.container}>
+            <Header />
+            <Image style={styles.image} source={require('../assets/img/flower.jpg')}/>
+        </View>
+    )
 }
 
 const styles = StyleSheet.create({

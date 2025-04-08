@@ -1,14 +1,15 @@
-import { StyleSheet, Text, View, Image } from 'react-native';
+import { StyleSheet, Text, View, Image } from "react-native";
+import Header  from "../components/Header";
 
-export default function Profile() {
-  return (
-    <View style={styles.container}>
-      <Image style={styles.image} source={require('../assets/img/flower.jpg')}/>
-      <Text style={styles.title}>Bem-vindo(a) ao nosso SEGUNDO site!</Text>
-    </View>
-  );
+export default function Home ({ navigation }) {
+    return (
+        <View style={styles.container}>
+            <Header />
+            <Image style={styles.image} source={require('../assets/img/flower.jpg')}/>
+            <Text style={styles.title}>Segunda página</Text>
+        </View>
+    )
 }
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -22,6 +23,7 @@ const styles = StyleSheet.create({
     borderRadius: 20,
   },
   title: {
-    color: "white"
+    color: "white",
+    margin: 5
   }
 });
